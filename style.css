@@ -1,0 +1,150 @@
+**{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+header{
+    padding: 15px;
+    margin: 5px 40px 50px 40px;
+    border-radius: 8px;
+    background-color: #220efa;
+    font-size: 25px ;
+    color: aliceblue;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+}
+
+.input{
+   margin: 0px 90px 80px 90px;
+}
+
+.input #search-input{
+    border-radius: 4.5px;
+    padding:3px 70px 3px 4px;
+    margin-bottom: 35px;
+    border-color: rgb(20, 20, 192);
+}
+
+.input .button{
+    display: flex;
+    gap: 14px;
+    
+}
+
+.input .search-price{
+    margin-top: 35px;
+    display: flex;
+    gap: 7px;
+}
+
+.input .search-price input{
+   border-color: rgb(20, 20, 192);
+   border-radius: 4.5px;
+   padding:3px 70px 3px 4px;
+}
+
+button{
+    background-color: #220efa;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    width: 80px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.filter.active {
+  background-color: white;
+  color: #220efa;
+  border: 1px solid #220efa;
+}
+
+
+#products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-item{
+    width: calc(25% - 1px);
+    background-color: #fff;
+    margin:  20px 0px;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    box-shadow: rgb(149, 157, 165 , 0.2) 0px 8px 24px;
+}
+#products .product-item span{
+  background-color: #220efa;
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.selected{
+  background-color: #fff;
+  border: 2px  solid #220efa;
+  color: #220efa;
+}
+
+@media (max-width: 1000px) {
+    header{
+    padding: 15px;
+    margin: 5px 90px 50px 90px;
+    font-size: 20px ;
+}
+
+  .product-item {
+    width: calc(33.33% - 20px); /* دو تا در هر ردیف */
+  }
+}
+
+@media (max-width: 480px) {
+    header{
+    padding: 15px;
+    margin: 5px 15px 30px 15px;   
+    font-size: 15px ;
+    }
+
+    .container {
+    margin: 0 15px;
+  }
+  .search-price {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .search-price input,
+  .search-price button {
+    width: 100%;
+  }
+
+  #products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-item {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
